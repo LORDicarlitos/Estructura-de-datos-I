@@ -27,6 +27,8 @@ public class Grafo_dirigido {
         //La implementación predeterminada del método devuelve una cadena con el nombre de la clase y una representación hexadecimal del valor del identificador del objeto en memoria.
         
         //Bucle for each (funciona con colecciones o arrays)
+         //for (tipo elemento : colección o array) {
+        //En cada iteración, la variable elemento toma el valor del siguiente elemento en la colección.
         for (Vertice vertice : vertices) {
             System.out.println(vertice.toString());   
         }
