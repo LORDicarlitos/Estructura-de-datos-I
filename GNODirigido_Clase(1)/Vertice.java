@@ -1,16 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package grafo_no_dirijido;
-
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-/**
- *
- * @author estudiante
- */
 public class Vertice {
 
     String dato;
@@ -26,7 +17,6 @@ public class Vertice {
     }
     public void agregar_adyacente (Vertice v ){
     this.adyacente.add(v);
-    
     
     }
 
