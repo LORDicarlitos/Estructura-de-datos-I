@@ -21,7 +21,8 @@ public class Grafo_dirigido {
           v1.agregar_adyacente(v2);
           adyacencia[v1.getID()][v2.getID()]=1;
      }
-     
+
+     //Este es mas sencillo que el BFS. Se utilizan menos herramientas y menos bucles.
      public ArrayList<Vertice> recorridoDFS(Vertice v){
           
           boolean[] visitados = new boolean[vertices.size()];
