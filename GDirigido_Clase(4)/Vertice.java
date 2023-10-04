@@ -57,7 +57,8 @@ public class Vertice {
                 //Mapea cada uno de los datos a sus representaciones de cadena. (Basicamente los convierte en cadena)
                 .map(Object::toString)
                 
-                //FALTA
+                //El método .joining() es una operación proporcionada por la clase Collectors en Java, específicamente diseñada para concatenar elementos de un stream en una sola cadena de caracteres. Es útil cuando trabajas con streams de objetos y deseas obtener una representación de cadena que combine estos objetos.
+                //El método .collect() en Java se utiliza en operaciones de streams para acumular los elementos de un stream en una colección o valor final. En otras palabras, collect() permite tomar los elementos de un stream y agruparlos, transformarlos o resumirlos en una estructura de datos o un valor específico.
                 .collect(Collectors.joining(", ")) + '}';
 
     }
