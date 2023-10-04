@@ -23,26 +23,27 @@ public class Grafo_dirigido {
      }
      
      public ArrayList<Vertice> recorridoDFS(Vertice v){
-        boolean[] visitados = new boolean[vertices.size()];
-        ArrayList<Vertice> ruta = new ArrayList();
-        Stack<Vertice> pila = new Stack();
-        pila.push(v);
-        while(!pila.isEmpty()){
-            Vertice vNew = pila.pop();
-            if(!visitados[vNew.getID()]){
-                visitados[vNew.getID()] = true;
-                ruta.add(vNew);
-            }
-            for(Vertice vertice: vNew.getAdyacente()){
-                int indice = vertices.indexOf(vertice);
-                if(!visitados[indice]){
-                    pila.push(vertice);
-                }
-            }
-        }
-        return ruta;
-    }
-public void imprimir_grafo(){
+          boolean[] visitados = new boolean[vertices.size()];
+          ArrayList<Vertice> ruta = new ArrayList();
+          Stack<Vertice> pila = new Stack();
+          pila.push(v);
+          while(!pila.isEmpty()){
+               Vertice vNew = pila.pop();
+               if(!visitados[vNew.getID()]){
+                    visitados[vNew.getID()] = true;
+                    ruta.add(vNew);
+               }
+               for(Vertice vertice: vNew.getAdyacente()){
+                    int indice = vertices.indexOf(vertice);
+                    if(!visitados[indice]){
+                         pila.push(vertice);
+                    }
+               }
+          }
+          return ruta;
+     }
+     
+     public void imprimir_grafo(){
         
         //El método toString() se utiliza para obtener una representación en cadena (string) del objeto.
         //La implementación predeterminada del método devuelve una cadena con el nombre de la clase y una representación hexadecimal del valor del identificador del objeto en memoria.
