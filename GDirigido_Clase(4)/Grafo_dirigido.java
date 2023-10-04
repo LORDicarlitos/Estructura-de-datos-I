@@ -42,5 +42,23 @@ public class Grafo_dirigido {
         }
         return ruta;
     }
+public void imprimir_grafo(){
+        
+        //El método toString() se utiliza para obtener una representación en cadena (string) del objeto.
+        //La implementación predeterminada del método devuelve una cadena con el nombre de la clase y una representación hexadecimal del valor del identificador del objeto en memoria.
+        
+        //Bucle for each (funciona con colecciones o arrays)
+        for (Vertice vertice : vertices) {
+            System.out.println(vertice.toString());   
+        }
 
+        //Se imprime la matriz de adyacencia
+        System.out.println("matriz de adyacencia");
+        for (int i = 0; i < vertices.size(); i++) {
+            for (int j = 0; j < vertices.size(); j++) {
+                System.out.print(adyacencia[i][j]);  
+            }
+            System.out.println("");
+        }
+    } 
 }
