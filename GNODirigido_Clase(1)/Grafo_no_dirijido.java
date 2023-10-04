@@ -1,23 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package grafo_no_dirijido;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author estudiante
- */
 public class Grafo_no_dirijido {
 
     ArrayList<Vertice> vertices = new ArrayList();
     int adyacencia[][];
     
-    /**
-     * @param args the command line arguments
-     */
     public Grafo_no_dirijido(){
     this.vertices = new ArrayList<>();
     this.adyacencia = new int [100][100];
