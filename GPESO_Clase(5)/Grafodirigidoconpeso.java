@@ -1,19 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package grafodirigidoconpeso;
-
 import java.util.ArrayList;
 
-/**
- *
- * @author katherineospino
- */
 public class Grafodirigidoconpeso {
 
     ArrayList<Vertice> vertices;
 
+    //Constructor
     public Grafodirigidoconpeso() {
         this.vertices = new ArrayList<>();
     }
@@ -24,7 +16,8 @@ public class Grafodirigidoconpeso {
 
     public void agregar(Vertice vertice){
         this.vertices.add(vertice);
-    }  
+    }
+    
     public void imprimir_grafo(){
         for (Vertice vertice : vertices) {
             System.out.print(vertice.getDato()+" ");
