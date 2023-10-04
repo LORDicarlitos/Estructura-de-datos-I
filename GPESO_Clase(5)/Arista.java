@@ -1,20 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package grafodirigidoconpeso;
 
-/**
- *
- * @author katherineospino
- */
-
 public class Arista {
+    
     int peso;
     Vertice destino;
+    
+    //Constructor
     public Arista(Vertice destino, int peso) {
         this.peso = peso;
-        this.destino=destino;
+        this.destino = destino;
     }
 
     public int getPeso() {
@@ -23,8 +17,5 @@ public class Arista {
 
     public Vertice getDestino() {
         return destino;
-    }
-    
-    
-    
+    }   
 }
