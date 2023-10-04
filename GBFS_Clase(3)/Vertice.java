@@ -45,6 +45,7 @@ public class Vertice {
         return cd;
     }
 
+    //El siguiente metodo reemplaza el valor predeterminado del toString de Java
     public String toString() {
         return "Vertice{" + "dato=" + dato + ",adyacentes=" + adyacente
                 //El metodo .stream trabaja con la lista de vértices adyacentes como un flujo (stream) de elementos. (Basicamente sirve para recorrer la ArrayList y realizar operaciones en cada objeto)
