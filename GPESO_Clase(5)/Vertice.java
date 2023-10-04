@@ -1,17 +1,12 @@
-
-
 package grafodirigidoconpeso;
-
 import java.util.ArrayList;
 
-/**
- *
- * @author katherineospino
- */
 public class Vertice {
+    
     String dato;
     ArrayList<Arista> arista;
 
+    //Constructor
     public Vertice(String dato) {
         this.dato = dato;
         this.arista = new ArrayList<>();
@@ -24,11 +19,10 @@ public class Vertice {
     public ArrayList<Arista> getArista() {
         return arista;
     }
+    
     public void agregar(Vertice destino,int peso){
         arista.add(new Arista(destino,peso));
         //destino.agregar(this., peso);
         
-    
     }
-    
 }
