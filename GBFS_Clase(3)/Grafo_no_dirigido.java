@@ -28,6 +28,7 @@ public class Grafo_no_dirigido {
     }
 
     public ArrayList<Integer> bfs(int inicio, int fin) {
+        
         ArrayList<Integer> ruta = new ArrayList();
         Queue<Integer> cola = new LinkedList<>();
         boolean[] visitados = new boolean[vertices.size()];
