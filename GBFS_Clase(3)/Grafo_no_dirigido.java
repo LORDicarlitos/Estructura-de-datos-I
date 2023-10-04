@@ -28,6 +28,63 @@ public class Grafo_no_dirigido {
     }
 
     public ArrayList<Integer> bfs(int inicio, int fin) {
+
+        //ArrayList que se devolvera con la ruta mas corta entre el punto de inicio y el final.
+        ArrayList<Integer> ruta = new ArrayList();
+
+        //Cola en la que se iran agregando y sacando los vertices adyacentes.
+        Queue<Integer> cola = new LinkedList<>();
+
+        //Array de todos los vertices en el que se confirmara si se visito el nodo de la posicion(vertice 3 = visitados[3]).
+        boolean[] visitados = new boolean[vertices.size()];
+
+        //Array en el que se guardara el numero ID del padre de cada vertice segun su posicion (padre del vertice 1 = Padre[1]).
+        int[] padre = new int[vertices.size()];
+
+        //El método .offer es una operación que se utiliza para agregar un elemento a una cola en Java.
+        //Se ingresa el vertice inicio en la cola, se marca como visitado y se identifica como como vertice de inicio en el array de padre (servira para detener el while al construir la ruta)
+        cola.offer(inicio);
+        visitados[inicio] = true;
+        padre[inicio] = -1;
+
+        //si la cola llega a vaciarse significa que todos los vertices han sido visitados y se ha encontrado la ruta.
+        while (!cola.isEmpty()) {
+
+            //El método .poll se utiliza para eliminar y devolver el elemento de la cabeza de una cola en Java.
+            int actual = cola.poll();
+
+            //cuando se encuentre el nodo final se empieza a formar la ruta
+            if (actual == fin) {
+                int vertice_actual = fin;
+
+                //Para encontrar la ruta se empieza desde el nodo final recorriendo sus padres hasta encontrar el nodo inicial (-1)
+                while (vertice_actual != -1) {
+
+                    //Como se ingresaran los valores en orden inverso se iran agregando todos en la posicion 0. asi cuando se agregue otro. Todos los demas se rueden a la derecha asi el primero sera el ultimo.
+                    ruta.add(0, vertice_actual);
+
+                    //se va buscando el padre de cada vertice
+                    vertice_actual = padre[vertice_actual];
+
+                }
+                return ruta;
+            }
+
+            //se buscaran cada nodo adyacente de los nodos sacados de la pila si, son adyacentes y no han sido visitados seran agregados a la cola.
+            for (int i = 0; i < vertices.size(); i++) {
+                if (adyacencia[actual][i] == 1 && !visitados[i]) {
+                    cola.offer(i); 
+                    visitados[i] = true;
+                    padre[i] = actual;
+
+                }
+            }
+        }
+        return ruta;
+    }
+
+    //BFS ORIGINAL
+    public ArrayList<Integer> bfs(int inicio, int fin) {
         
         ArrayList<Integer> ruta = new ArrayList();
         Queue<Integer> cola = new LinkedList<>();
