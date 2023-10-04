@@ -23,9 +23,12 @@ public class Grafo_dirigido {
      }
      
      public ArrayList<Vertice> recorridoDFS(Vertice v){
+          
           boolean[] visitados = new boolean[vertices.size()];
           ArrayList<Vertice> ruta = new ArrayList();
           Stack<Vertice> pila = new Stack();
+
+          //El método .push() se utiliza en la clase Stack de Java para agregar un elemento a la parte superior de la pila.
           pila.push(v);
           while(!pila.isEmpty()){
                Vertice vNew = pila.pop();
@@ -34,6 +37,9 @@ public class Grafo_dirigido {
                     ruta.add(vNew);
                }
                for(Vertice vertice: vNew.getAdyacente()){
+
+                    //El método .indexOf() se utiliza en las colecciones en Java para buscar la posición (índice) de un elemento específico dentro de la colección.
+                    //si no encuentra el objeto devuelve -1. Solo devuelve la posicion de la primera aparicion del elemento en la coleccion.
                     int indice = vertices.indexOf(vertice);
                     if(!visitados[indice]){
                          pila.push(vertice);
