@@ -31,6 +31,8 @@ public class Grafo_dirigido {
           //El método .push() se utiliza en la clase Stack de Java para agregar un elemento a la parte superior de la pila.
           pila.push(v);
           while(!pila.isEmpty()){
+
+               //El método .pop() se utiliza en la clase Stack de Java para eliminar y devolver el elemento en la parte superior de la pila.
                Vertice vNew = pila.pop();
                if(!visitados[vNew.getID()]){
                     visitados[vNew.getID()] = true;
@@ -50,24 +52,23 @@ public class Grafo_dirigido {
      }
      
      public void imprimir_grafo(){
-        
-        //El método toString() se utiliza para obtener una representación en cadena (string) del objeto.
-        //La implementación predeterminada del método devuelve una cadena con el nombre de la clase y una representación hexadecimal del valor del identificador del objeto en memoria.
-        
-        //Bucle for each (funciona con colecciones o arrays)
+          //El método toString() se utiliza para obtener una representación en cadena (string) del objeto.
+          //La implementación predeterminada del método devuelve una cadena con el nombre de la clase y una representación hexadecimal del valor del identificador del objeto en memoria.
+          
+          //Bucle for each (funciona con colecciones o arrays)
           //for (tipo elemento : colección o array) {
-        //En cada iteración, la variable elemento toma el valor del siguiente elemento en la colección.
+          //En cada iteración, la variable elemento toma el valor del siguiente elemento en la colección.
           for (Vertice vertice : vertices) {
                System.out.println(vertice.toString());   
           }
-
-        //Se imprime la matriz de adyacencia
-        System.out.println("matriz de adyacencia");
-        for (int i = 0; i < vertices.size(); i++) {
-            for (int j = 0; j < vertices.size(); j++) {
-                System.out.print(adyacencia[i][j]);  
-            }
-            System.out.println("");
-        }
-    } 
+          
+          //Se imprime la matriz de adyacencia
+          System.out.println("matriz de adyacencia");
+          for (int i = 0; i < vertices.size(); i++) {
+               for (int j = 0; j < vertices.size(); j++) {
+                    System.out.print(adyacencia[i][j]); 
+               }
+               System.out.println("");
+          }
+     }
 }
