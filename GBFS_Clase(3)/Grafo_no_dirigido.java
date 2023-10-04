@@ -1,22 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ejerciciobfs;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- *
- * @author estudiante
- */
 public class Grafo_no_dirigido {
-
+    
     ArrayList<Vertice> vertices = new ArrayList();
     int adyacencia[][];
 
+    //Constructor
     public Grafo_no_dirigido() {
         this.vertices = new ArrayList<>();
         this.adyacencia = new int[100][100];
@@ -69,20 +61,23 @@ public class Grafo_no_dirigido {
         return ruta;
     }
 
-    public void imprimir_grafo() {
+    public void imprimir_grafo(){
+        
+        //El método toString() se utiliza para obtener una representación en cadena (string) del objeto.
+        //La implementación predeterminada del método devuelve una cadena con el nombre de la clase y una representación hexadecimal del valor del identificador del objeto en memoria.
+        
+        //Bucle for each (funciona con colecciones o arrays)
         for (Vertice vertice : vertices) {
-            System.out.println(vertice.toString());
+            System.out.println(vertice.toString());   
         }
+
+        //Se imprime la matriz de adyacencia
         System.out.println("matriz de adyacencia");
-
         for (int i = 0; i < vertices.size(); i++) {
-
             for (int j = 0; j < vertices.size(); j++) {
-                System.out.print(adyacencia[i][j]);
+                System.out.print(adyacencia[i][j]);  
             }
             System.out.println("");
-
         }
-
-    }
+    } 
 }
